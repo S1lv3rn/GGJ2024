@@ -44,6 +44,7 @@ text = "B3"
 
 [node name="Button4" type="Button" parent="."]
 unique_name_in_owner = true
+visible = false
 offset_left = 553.0
 offset_top = 552.0
 offset_right = 928.0

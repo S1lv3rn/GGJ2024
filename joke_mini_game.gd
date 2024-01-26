@@ -10,10 +10,6 @@ var kingQ
 var rightAns = 0
 
 func _ready():
-	%Button2.visible = false
-	%Button3.visible = false
-	%Button4.visible = false
-	%Button1.visible = false
 	chooseQuestion()
 
 func chooseQuestion():
@@ -27,7 +23,8 @@ func chooseQuestion():
 		kingQ = "Sissors"
 		
 	%KingsTalk.text = kingQ
-		
+	
+	%NextButton.visible = false
 	%Button2.visible = true
 	%Button3.visible = true
 	%Button4.visible = true
@@ -44,6 +41,11 @@ func check_answer(answer):
 		or kingQ == "Rock" and answer == "Paper")
 	var reply
 	
+	%Button2.visible = false
+	%Button3.visible = false
+	%Button4.visible = false
+	%Button1.visible = false
+	
 	if isRight:
 		rightAns +=1
 		reply = "Correct!"
@@ -51,6 +53,7 @@ func check_answer(answer):
 		reply = "Wrong!"
 		
 	%KingsTalk.text = reply
+	%NextButton.visible = true
 
 #func _on_button_2_pressed():
 	#check_answer(Button2.text)
