@@ -55,6 +55,22 @@ func check_answer(answer):
 	%KingsTalk.text = reply
 	%NextButton.visible = true
 
+
+
 #func _on_button_2_pressed():
 	#check_answer(Button2.text)
 #	pass
+
+
+func _on_button_1_pressed():
+	check_answer(%Button1.text)
+
+
+func _on_button_2_pressed():
+	check_answer(%Button2.text)
+
+func _on_button_3_pressed():
+	check_answer(%Button3.text)
+
+func _on_button_4_pressed():
+	check_answer(%Button4.text)
