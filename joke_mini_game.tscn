@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://bfhwwygkcs10l"]
+[gd_scene load_steps=2 format=3 uid="uid://bfhwwygkcs10l"]
+
+[ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="1_gtstv"]
 
 [node name="JokeMiniGame" type="Node2D"]
+
+[node name="king" type="Sprite2D" parent="."]
+position = Vector2(768.5, 171)
+scale = Vector2(1.64844, 1.28125)
+texture = ExtResource("1_gtstv")
+
+[node name="Jester" type="Sprite2D" parent="."]
+position = Vector2(302, 313)
+texture = ExtResource("1_gtstv")
