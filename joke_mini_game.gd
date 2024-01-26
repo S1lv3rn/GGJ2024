@@ -13,7 +13,7 @@ func _ready():
 	%Button2.visible = false
 	%Button3.visible = false
 	%Button4.visible = false
-	%Button5.visible = false
+	%Button1.visible = false
 	chooseQuestion()
 
 func chooseQuestion():
@@ -31,11 +31,11 @@ func chooseQuestion():
 	%Button2.visible = true
 	%Button3.visible = true
 	%Button4.visible = true
-	%Button5.visible = true
+	%Button1.visible = true
 	%Button2.text = "button2"
 	%Button3.text = "button3"
 	%Button4.text = "button4"
-	%Button5.text = "button1"
+	%Button1.text = "button1"
 
 # on button 
 func check_answer(answer):

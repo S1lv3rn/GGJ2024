@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgug8d7ruksj3"]
+
+[ext_resource type="Script" path="res://joke_mini_game.gd" id="1_1bnnc"]
+[ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="2_kp7e3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e5icx"]
+font_size = 27
+
+[node name="JokeGame" type="Node2D"]
+script = ExtResource("1_1bnnc")
+
+[node name="King" type="Sprite2D" parent="."]
+position = Vector2(792, 105)
+scale = Vector2(1.54688, 1)
+texture = ExtResource("2_kp7e3")
+
+[node name="Jesture" type="Sprite2D" parent="."]
+position = Vector2(350, 312)
+texture = ExtResource("2_kp7e3")
+
+[node name="Button1" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 92.0
+offset_top = 409.0
+offset_right = 467.0
+offset_bottom = 506.0
+text = "B1"
+
+[node name="Button2" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 538.0
+offset_top = 414.0
+offset_right = 913.0
+offset_bottom = 511.0
+text = "B2"
+
+[node name="Button3" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 95.0
+offset_top = 547.0
+offset_right = 470.0
+offset_bottom = 644.0
+text = "B3"
+
+[node name="Button4" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 553.0
+offset_top = 552.0
+offset_right = 928.0
+offset_bottom = 649.0
+text = "B4"
+
+[node name="KingsTalk" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 208.0
+offset_top = 42.0
+offset_right = 485.0
+offset_bottom = 149.0
+text = "King Talk"
+label_settings = SubResource("LabelSettings_e5icx")
