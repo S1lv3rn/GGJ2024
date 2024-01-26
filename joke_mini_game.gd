@@ -12,7 +12,12 @@ var rightAns = 0
 func _ready():
 	chooseQuestion()
 
+func _physics_process(delta):
+	%TimeBar.value = %Timer.time_left
+	
 func chooseQuestion():
+	%Timer.start()
+	%TimeBar.visible = true
 	var questionNum = randi_range(1,3)
 	
 	if questionNum == 1:
@@ -36,6 +41,8 @@ func chooseQuestion():
 
 # on button 
 func check_answer(answer):
+	%Timer.stop()
+	%TimeBar.visible = false
 	var isRight = (kingQ == "Paper" and answer == "Scissors"
 		or kingQ == "Scissors" and answer == "Rock"
 		or kingQ == "Rock" and answer == "Paper")
@@ -79,3 +86,16 @@ func _on_button_4_pressed():
 
 func _on_next_button_pressed():
 	chooseQuestion()
+
+
+func _on_timer_timeout():
+	%Timer.stop()
+	%TimeBar.visible = false;
+	
+	%Button2.visible = false
+	%Button3.visible = false
+	%Button4.visible = false
+	%Button1.visible = false
+	var reply = "Too slow!"
+	%KingsTalk.text = reply
+	%NextButton.visible = true
