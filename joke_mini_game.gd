@@ -32,19 +32,26 @@ func chooseQuestion():
 	%Button3.visible = true
 	%Button4.visible = true
 	%Button1.visible = true
-	%Button2.text = "button2"
-	%Button3.text = "button3"
-	%Button4.text = "button4"
-	%Button1.text = "button1"
+	%Button2.text = "Sissors"
+	%Button3.text = "Rock"
+	%Button4.text = "Paper"
+	%Button1.text = "Paper"
 
 # on button 
 func check_answer(answer):
 	var isRight = (kingQ == "Paper" and answer == "Sissors"
 		or kingQ == "Sissors" and answer == "Rock"
 		or kingQ == "Rock" and answer == "Paper")
+	var reply
+	
 	if isRight:
 		rightAns +=1
+		reply = "Correct!"
+	else:
+		reply = "Wrong!"
+		
+	%KingsTalk.text = reply
 
-func _on_button_2_pressed():
+#func _on_button_2_pressed():
 	#check_answer(Button2.text)
-	pass
+#	pass
