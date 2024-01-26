@@ -5,7 +5,9 @@ extends Node2D
 # 3 if button is clicked, disable and check answer
 # 4 show correct response 
 # 5 enable butthons and goto 1
-
+var answer_arr  = []
+var kingQ
+var rightAns = 0
 
 func _ready():
 	chooseQuestion()
@@ -14,15 +16,23 @@ func chooseQuestion():
 	var questionNum = randi_range(1,3)
 	
 	if questionNum == 1:
-		%KingsTalk.text = "Rock"
+		kingQ = "Rock"
 	elif questionNum == 2:
-		%KingsTalk.text = "Paper"
+		kingQ = "Paper"
 	else:
-		%KingsTalk.text = "Sissors"
+		kingQ = "Sissors"
+		
+	%KingsTalk.text = kingQ
 		
 
 # on button 
-
+func check_answer(answer):
+	var isRight = (kingQ == "Paper" and answer == "Sissors"
+		or kingQ == "Sissors" and answer == "Rock"
+		or kingQ == "Rock" and answer == "Paper")
+	if isRight:
+		rightAns +=1
 
 func _on_button_2_pressed():
-	pass # Replace with function body.
+	#check_answer(Button2.text)
+	pass
