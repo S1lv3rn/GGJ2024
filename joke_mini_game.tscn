@@ -27,6 +27,13 @@ offset_bottom = 153.0
 text = "King's Talk"
 label_settings = SubResource("LabelSettings_84jxx")
 
+[node name="Button1" type="Button" parent="."]
+offset_left = 77.0
+offset_top = 415.0
+offset_right = 488.0
+offset_bottom = 517.0
+text = "Option 1"
+
 [node name="Button2" type="Button" parent="."]
 unique_name_in_owner = true
 offset_left = 554.0
@@ -51,6 +58,8 @@ offset_right = 970.0
 offset_bottom = 641.0
 text = "Option 4"
 
+<<<<<<< HEAD
+=======
 [node name="Button5" type="Button" parent="."]
 unique_name_in_owner = true
 offset_left = 77.0
@@ -59,4 +68,5 @@ offset_right = 488.0
 offset_bottom = 517.0
 text = "Option 1"
 
+>>>>>>> 6bcc34eb15c2d149008c743c4f017f324d590a46
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
