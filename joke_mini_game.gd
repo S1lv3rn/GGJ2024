@@ -20,7 +20,7 @@ func chooseQuestion():
 	elif questionNum == 2:
 		kingQ = "Paper"
 	else:
-		kingQ = "Sissors"
+		kingQ = "Scissors"
 		
 	%KingsTalk.text = kingQ
 	
@@ -29,15 +29,15 @@ func chooseQuestion():
 	%Button3.visible = true
 	%Button4.visible = true
 	%Button1.visible = true
-	%Button2.text = "Sissors"
+	%Button2.text = "Scissors"
 	%Button3.text = "Rock"
 	%Button4.text = "Paper"
 	%Button1.text = "Paper"
 
 # on button 
 func check_answer(answer):
-	var isRight = (kingQ == "Paper" and answer == "Sissors"
-		or kingQ == "Sissors" and answer == "Rock"
+	var isRight = (kingQ == "Paper" and answer == "Scissors"
+		or kingQ == "Scissors" and answer == "Rock"
 		or kingQ == "Rock" and answer == "Paper")
 	var reply
 	
