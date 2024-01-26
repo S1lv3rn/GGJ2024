@@ -29,18 +29,18 @@ label_settings = SubResource("LabelSettings_84jxx")
 
 [node name="Button2" type="Button" parent="."]
 unique_name_in_owner = true
-offset_left = 568.0
-offset_top = 414.0
-offset_right = 979.0
-offset_bottom = 516.0
+offset_left = 554.0
+offset_top = 415.0
+offset_right = 965.0
+offset_bottom = 517.0
 text = "Option 2"
 
 [node name="Button3" type="Button" parent="."]
 unique_name_in_owner = true
-offset_left = 69.0
-offset_top = 537.0
-offset_right = 480.0
-offset_bottom = 639.0
+offset_left = 76.0
+offset_top = 541.0
+offset_right = 487.0
+offset_bottom = 643.0
 text = "Option 3"
 
 [node name="Button4" type="Button" parent="."]
