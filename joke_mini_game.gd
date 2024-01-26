@@ -8,6 +8,8 @@ extends Node2D
 var answer_arr  = []
 var kingQ
 var rightAns = 0
+var questionNo = 0
+var userAnswers = [0,0,0,0,0]
 
 func _ready():
 	chooseQuestion()
@@ -56,8 +58,10 @@ func check_answer(answer):
 	if isRight:
 		rightAns +=1
 		reply = "Correct!"
+		userAnswers[questionNo] = 1
 	else:
 		reply = "Wrong!"
+		userAnswers[questionNo] = 2
 		
 	%KingsTalk.text = reply
 	%NextButton.visible = true
@@ -85,17 +89,18 @@ func _on_button_4_pressed():
 
 
 func _on_next_button_pressed():
+	questionNo += 1
 	chooseQuestion()
 
 
 func _on_timer_timeout():
 	%Timer.stop()
 	%TimeBar.visible = false;
-	
 	%Button2.visible = false
 	%Button3.visible = false
 	%Button4.visible = false
 	%Button1.visible = false
 	var reply = "Too slow!"
+	userAnswers[questionNo] = 2
 	%KingsTalk.text = reply
 	%NextButton.visible = true
