@@ -74,3 +74,8 @@ func _on_button_3_pressed():
 
 func _on_button_4_pressed():
 	check_answer(%Button4.text)
+
+
+
+func _on_next_button_pressed():
+	chooseQuestion()
