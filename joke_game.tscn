@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgug8d7ruksj3"]
+[gd_scene load_steps=5 format=3 uid="uid://bgug8d7ruksj3"]
 
 [ext_resource type="Script" path="res://joke_mini_game.gd" id="1_1bnnc"]
 [ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="2_kp7e3"]
+[ext_resource type="Script" path="res://Container.gd" id="3_x5res"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_e5icx"]
 font_size = 27
@@ -80,6 +81,13 @@ offset_top = -3.0
 offset_right = 801.0
 offset_bottom = 24.0
 max_value = 3.0
+
+[node name="Container" type="Container" parent="."]
+offset_left = 40.0
+offset_top = 118.0
+offset_right = 377.0
+offset_bottom = 158.0
+script = ExtResource("3_x5res")
 
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
