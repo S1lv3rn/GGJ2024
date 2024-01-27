@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://batmetqfymkn4"]
+[gd_scene load_steps=8 format=3 uid="uid://batmetqfymkn4"]
 
 [ext_resource type="Script" path="res://fallingBalls/falling_balls.gd" id="1_af052"]
 [ext_resource type="PackedScene" uid="uid://by84n35stcsf4" path="res://points_list.tscn" id="2_7qmv8"]
 [ext_resource type="PackedScene" uid="uid://bm8tlijkqh035" path="res://jesture.tscn" id="3_te5xc"]
 [ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="4_r0o8f"]
+[ext_resource type="PackedScene" path="res://game_end.tscn" id="5_u0mlo"]
 
 [sub_resource type="Curve2D" id="Curve2D_2mgxq"]
 _data = {
@@ -58,5 +59,8 @@ position = Vector2(523, -8.75)
 shape = SubResource("RectangleShape2D_qlmit")
 debug_color = Color(0.368627, 0.490196, 0.964706, 0.419608)
 
+[node name="GameEnd" parent="." instance=ExtResource("5_u0mlo")]
+
+[connection signal="timeout" from="KingTimer" to="." method="_on_king_timer_timeout"]
 [connection signal="timeout" from="BallSpawnerPath/BallTimer" to="." method="_on_ball_timer_timeout"]
 [connection signal="area_entered" from="Floor" to="." method="_on_floor_area_entered"]

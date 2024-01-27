@@ -3,6 +3,7 @@ extends Node2D
 var penaty = []
 func _ready():
 	$Jesture.isMoving = true
+	get_tree().paused = false
 
 func _physics_process(delta):
 	$KingTimer/ProgressBar.value = $KingTimer.time_left
@@ -23,6 +24,15 @@ func _on_floor_area_entered(area):
 	if area.is_in_group("ball"):
 		area.queue_free()
 		penaty.append(2)
-		print(penaty)
+		$PointsList.displayScore(penaty)
+		if penaty.size() == 5:
+			get_tree().paused = true
+			$GameEnd.displayResult(false)
+			
 	pass
 
+
+
+func _on_king_timer_timeout():
+	get_tree().paused = true
+	$GameEnd.displayResult(true)

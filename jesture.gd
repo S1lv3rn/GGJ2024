@@ -8,8 +8,6 @@ func _physics_process(delta):
 		position += direction * SPEED * delta
 	
 
-
-
 func _on_area_entered(area):
 	if area.is_in_group("ball"):
 		area.queue_free()
