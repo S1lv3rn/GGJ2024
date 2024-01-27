@@ -12,6 +12,7 @@ var questionNo = 0
 var userAnswers = [0,0,0,0,0]
 
 func _ready():
+	%GameEnd.visible = false
 	chooseQuestion()
 
 func _physics_process(delta):
@@ -64,7 +65,16 @@ func check_answer(answer):
 		userAnswers[questionNo] = 2
 		
 	%KingsTalk.text = reply
-	%NextButton.visible = true
+	
+	if userAnswers.count(2) >= 3:
+		%GameEnd/GameEndLabel.text = "what are you doing"
+		%GameEnd.visible = true
+	
+	if questionNo == 4:
+		%GameEnd/GameEndLabel.text = "End"
+		%GameEnd.visible = true
+	else:
+		%NextButton.visible = true
 
 
 
