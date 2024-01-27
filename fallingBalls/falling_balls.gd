@@ -1,6 +1,8 @@
 extends Node2D
 
 var penaty = []
+func _ready():
+	$Jesture.isMoving = true
 
 func _physics_process(delta):
 	$KingTimer/ProgressBar.value = $KingTimer.time_left
@@ -22,8 +24,5 @@ func _on_floor_area_entered(area):
 		area.queue_free()
 		penaty.append(2)
 		print(penaty)
-	
-		
-	
-		#$PointsList.
 	pass
+

@@ -15,3 +15,5 @@ shape = SubResource("CircleShape2D_xjlru")
 [node name="Icon" type="Sprite2D" parent="."]
 scale = Vector2(0.287, 0.3)
 texture = ExtResource("1_pjarq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
