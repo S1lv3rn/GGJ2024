@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://by84n35stcsf4" path="res://points_list.tscn" id="2_7qmv8"]
 [ext_resource type="PackedScene" uid="uid://bm8tlijkqh035" path="res://jesture.tscn" id="3_te5xc"]
 [ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="4_r0o8f"]
-[ext_resource type="PackedScene" path="res://game_end.tscn" id="5_u0mlo"]
+[ext_resource type="PackedScene" uid="uid://c6ufhp35h6pln" path="res://game_end.tscn" id="5_u0mlo"]
 
 [sub_resource type="Curve2D" id="Curve2D_2mgxq"]
 _data = {
