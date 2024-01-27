@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://b54iumlq6ha5i"]
+
+[ext_resource type="Script" path="res://game_end.gd" id="1_vmnos"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gx6q1"]
+font_size = 76
+
+[node name="GameEnd" type="CanvasLayer"]
+script = ExtResource("1_vmnos")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1149.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="GameEndLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -274.0
+offset_top = -68.0
+offset_right = 274.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game Over"
+label_settings = SubResource("LabelSettings_gx6q1")
+horizontal_alignment = 1
+vertical_alignment = 1
