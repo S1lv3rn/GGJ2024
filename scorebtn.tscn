@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceuwnvxcecpwc"]
+
+[ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="1_73mtt"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_niu7m"]
+
+[node name="scorebtn" type="Sprite2D"]
+material = SubResource("CanvasItemMaterial_niu7m")
+scale = Vector2(0.257813, 0.25)
+texture = ExtResource("1_73mtt")
