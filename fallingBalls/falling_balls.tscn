@@ -1,3 +1,35 @@
-[gd_scene format=3 uid="uid://batmetqfymkn4"]
+[gd_scene load_steps=3 format=3 uid="uid://batmetqfymkn4"]
+
+[ext_resource type="Script" path="res://fallingBalls/falling_balls.gd" id="1_af052"]
+
+[sub_resource type="Curve2D" id="Curve2D_2mgxq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 44, -67, 0, 0, 0, 0, 1106, -64)
+}
+point_count = 2
 
 [node name="FallingBalls" type="Node2D"]
+script = ExtResource("1_af052")
+
+[node name="KingTimer" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+
+[node name="ProgressBar" type="ProgressBar" parent="KingTimer"]
+unique_name_in_owner = true
+offset_left = 255.0
+offset_top = 48.0
+offset_right = 854.0
+offset_bottom = 75.0
+
+[node name="BallSpawnerPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_2mgxq")
+
+[node name="BallSpawner" type="PathFollow2D" parent="BallSpawnerPath"]
+position = Vector2(44, -67)
+rotation = 0.00282485
+
+[node name="BallTimer" type="Timer" parent="BallSpawnerPath"]
+autostart = true
+
+[connection signal="timeout" from="BallSpawnerPath/BallTimer" to="." method="_on_ball_timer_timeout"]

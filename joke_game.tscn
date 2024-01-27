@@ -20,6 +20,7 @@ scale = Vector2(1.54688, 1)
 texture = ExtResource("2_kp7e3")
 
 [node name="Jesture" parent="." instance=ExtResource("3_do0po")]
+position = Vector2(250, 298)
 
 [node name="Button1" type="Button" parent="."]
 unique_name_in_owner = true
