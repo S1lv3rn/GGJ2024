@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm8tlijkqh035"]
+
+[ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="1_lmjwy"]
+
+[node name="Jesture" type="Sprite2D"]
+position = Vector2(350, 312)
+texture = ExtResource("1_lmjwy")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgug8d7ruksj3"]
+[gd_scene load_steps=7 format=3 uid="uid://bgug8d7ruksj3"]
 
 [ext_resource type="Script" path="res://joke_mini_game.gd" id="1_1bnnc"]
 [ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="2_kp7e3"]
-[ext_resource type="Script" path="res://Container.gd" id="3_x5res"]
+[ext_resource type="PackedScene" uid="uid://bm8tlijkqh035" path="res://jesture.tscn" id="3_do0po"]
+[ext_resource type="PackedScene" uid="uid://by84n35stcsf4" path="res://points_list.tscn" id="4_7qtha"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_e5icx"]
 font_size = 27
@@ -18,9 +19,7 @@ position = Vector2(792, 105)
 scale = Vector2(1.54688, 1)
 texture = ExtResource("2_kp7e3")
 
-[node name="Jesture" type="Sprite2D" parent="."]
-position = Vector2(350, 312)
-texture = ExtResource("2_kp7e3")
+[node name="Jesture" parent="." instance=ExtResource("3_do0po")]
 
 [node name="Button1" type="Button" parent="."]
 unique_name_in_owner = true
@@ -111,10 +110,8 @@ label_settings = SubResource("LabelSettings_gx6q1")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PointsList" type="Marker2D" parent="."]
+[node name="PointsList" parent="." instance=ExtResource("4_7qtha")]
 unique_name_in_owner = true
-position = Vector2(207, 114)
-script = ExtResource("3_x5res")
 
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
