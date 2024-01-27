@@ -30,7 +30,6 @@ func chooseQuestion():
 		kingQ = "Scissors"
 		
 	%KingsTalk.text = kingQ
-	
 	%NextButton.visible = false
 	%Button2.visible = true
 	%Button3.visible = true
@@ -112,3 +111,12 @@ func _on_timer_timeout():
 	userAnswers[questionNo] = 2
 	%KingsTalk.text = reply
 	%NextButton.visible = true
+
+func setUpQuestions():
+	var questionToAnswer = {"What’s red and bad for your teeth?": "A Brick",
+							"What's yellow and bad for your teeth?":"A Yellow Brick",
+							"What's blue and bad for your teeth?":"A Blue Brick",
+							"What's brown and sticky": "A stick",
+							"What's brown and bad for your teeth?":"A Brick"
+							}
+	
