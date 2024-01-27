@@ -67,8 +67,14 @@ func check_answer(answer):
 	%KingsTalk.text = reply
 	
 	if userAnswers.count(2) >= 3:
+		%GameEnd/GameEndLabel.text = "what are you doing"
 		%GameEnd.visible = true
-	%NextButton.visible = true
+	
+	if questionNo == 4:
+		%GameEnd/GameEndLabel.text = "End"
+		%GameEnd.visible = true
+	else:
+		%NextButton.visible = true
 
 
 
