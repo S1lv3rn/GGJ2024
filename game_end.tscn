@@ -6,6 +6,7 @@
 font_size = 76
 
 [node name="GameEnd" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_vmnos")
 
 [node name="ColorRect" type="ColorRect" parent="."]

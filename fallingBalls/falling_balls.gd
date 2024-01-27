@@ -1,6 +1,8 @@
 extends Node2D
 
+var isNotPaused = true
 var penaty = []
+
 func _ready():
 	$Jesture.isMoving = true
 	get_tree().paused = false
@@ -17,16 +19,20 @@ func spawn_ball():
 
 
 func _on_ball_timer_timeout():
-	spawn_ball()
+	if isNotPaused:
+		spawn_ball()
+
 
 
 func _on_floor_area_entered(area):
-	if area.is_in_group("ball"):
+	if area.is_in_group("ball") and isNotPaused:
 		area.queue_free()
 		penaty.append(2)
 		$PointsList.displayScore(penaty)
+		
 		if penaty.size() == 5:
-			get_tree().paused = true
+			isNotPaused = false
+			$KingTimer.stop()
 			$GameEnd.displayResult(false)
 			
 	pass
@@ -34,5 +40,5 @@ func _on_floor_area_entered(area):
 
 
 func _on_king_timer_timeout():
-	get_tree().paused = true
+	$KingTimer.stop()
 	$GameEnd.displayResult(true)
