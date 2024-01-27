@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://joke_mini_game.gd" id="1_1bnnc"]
 [ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="2_kp7e3"]
-[ext_resource type="PackedScene" path="res://jesture.tscn" id="3_do0po"]
-[ext_resource type="PackedScene" path="res://points_list.tscn" id="4_7qtha"]
+[ext_resource type="PackedScene" uid="uid://bm8tlijkqh035" path="res://jesture.tscn" id="3_do0po"]
+[ext_resource type="PackedScene" uid="uid://by84n35stcsf4" path="res://points_list.tscn" id="4_7qtha"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_e5icx"]
 font_size = 27
@@ -20,6 +20,7 @@ scale = Vector2(1.54688, 1)
 texture = ExtResource("2_kp7e3")
 
 [node name="Jesture" parent="." instance=ExtResource("3_do0po")]
+position = Vector2(250, 298)
 
 [node name="Button1" type="Button" parent="."]
 unique_name_in_owner = true

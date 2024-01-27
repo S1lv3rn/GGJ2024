@@ -27,7 +27,6 @@ offset_left = 255.0
 offset_top = 48.0
 offset_right = 854.0
 offset_bottom = 75.0
-max_value = 30.0
 
 [node name="BallSpawnerPath" type="Path2D" parent="."]
 curve = SubResource("Curve2D_2mgxq")
