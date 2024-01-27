@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdwm2em4iu751"]
+
+[ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="1_kns40"]
+
+[node name="MainGame" type="Node2D"]
+
+[node name="King" type="Sprite2D" parent="."]
+position = Vector2(557, 75)
+texture = ExtResource("1_kns40")
+
+[node name="Jester" type="Sprite2D" parent="."]
+position = Vector2(560, 451)
+scale = Vector2(0.640625, 0.492188)
+texture = ExtResource("1_kns40")

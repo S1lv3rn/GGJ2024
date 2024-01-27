@@ -64,16 +64,17 @@ func check_answer(answer):
 		reply = "Wrong!"
 		userAnswers[questionNo] = 2
 		
+	%PointsList.displayScore(userAnswers)
 	%KingsTalk.text = reply
 	
 	if userAnswers.count(2) >= 3:
 		%GameEnd/GameEndLabel.text = "what are you doing"
 		%GameEnd.visible = true
 	
-	if questionNo == 4:
-		%GameEnd/GameEndLabel.text = "End"
+	if userAnswers.count(1) >= 3:
+		%GameEnd/GameEndLabel.text = "you did it"
 		%GameEnd.visible = true
-	else:
+	elif questionNo < 5:
 		%NextButton.visible = true
 
 
