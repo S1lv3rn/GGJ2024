@@ -1,6 +1,7 @@
 extends Area2D
 var isMoving = false
 const SPEED = 800.0
+var stage = 0
 
 func _physics_process(delta):
 	if isMoving:

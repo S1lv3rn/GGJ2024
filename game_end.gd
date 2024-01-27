@@ -5,6 +5,10 @@ extends CanvasLayer
 func _ready():
 	visible = false
 
+func _process(delta):
+	if Input.is_action_pressed("enter") and visible:
+		get_tree().change_scene_to_file("res://main_game.tscn")
+		print("TEST")
 
 func displayResult(result):
 	if !result:
