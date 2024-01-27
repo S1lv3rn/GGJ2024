@@ -85,16 +85,16 @@ offset_right = 801.0
 offset_bottom = 24.0
 max_value = 3.0
 
-[node name="GameOver" type="CanvasLayer" parent="."]
+[node name="GameEnd" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
 visible = false
 
-[node name="ColorRect" type="ColorRect" parent="GameOver"]
+[node name="ColorRect" type="ColorRect" parent="GameEnd"]
 offset_right = 1149.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="GameOver"]
+[node name="Label" type="Label" parent="GameEnd"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
