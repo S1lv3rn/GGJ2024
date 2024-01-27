@@ -18,12 +18,11 @@ func _ready():
 		rectPosition.x += 35
 
 func displayScore(scoreArr):
-	for score in scoreArr:
-		var rect = ColorRect.new()
-		if score == 1:
-			rect.color = RIGHT
-		elif score == 2:
-			rect.color = WRONG
+	for i in range(scoreArr.size()):
+		if scoreArr[i] == 1:
+			rectArr[i].modulate = RIGHT
+		elif scoreArr[i] == 2:
+			rectArr[i].modulate = WRONG
 		else:
-			rect.color = EMPTY
+			rectArr[i].modulate = EMPTY
 
