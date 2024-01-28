@@ -40,5 +40,6 @@ func _on_floor_area_entered(area):
 
 
 func _on_king_timer_timeout():
+	isNotPaused = false
 	$KingTimer.stop()
 	$GameEnd.displayResult(true)
