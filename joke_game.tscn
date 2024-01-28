@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bgug8d7ruksj3"]
+[gd_scene load_steps=9 format=3 uid="uid://bgug8d7ruksj3"]
 
 [ext_resource type="Script" path="res://joke_mini_game.gd" id="1_1bnnc"]
 [ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="2_kp7e3"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b54iumlq6ha5i" path="res://game_end.tscn" id="4_4yibn"]
 [ext_resource type="PackedScene" uid="uid://by84n35stcsf4" path="res://points_list.tscn" id="4_7qtha"]
 [ext_resource type="AudioStream" uid="uid://c546aydews2fg" path="res://vodevil-15550.mp3" id="6_e23fg"]
+[ext_resource type="AudioStream" uid="uid://cflwq4083s7td" path="res://funny.wav" id="7_auhs0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_e5icx"]
 font_size = 27
@@ -93,6 +94,11 @@ unique_name_in_owner = true
 [node name="clownmusic" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("6_e23fg")
+volume_db = -10.0
+
+[node name="funny" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_auhs0")
 
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -59,6 +59,7 @@ func check_answer(answer):
 		rightAns +=1
 		reply = "Correct!"
 		userAnswers[questionNo] = 1
+		%funny.play()
 	else:
 		reply = "Wrong!"
 		userAnswers[questionNo] = 2
