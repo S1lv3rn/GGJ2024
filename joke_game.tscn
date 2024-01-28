@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bgug8d7ruksj3"]
+[gd_scene load_steps=11 format=3 uid="uid://bgug8d7ruksj3"]
 
 [ext_resource type="Script" path="res://joke_mini_game.gd" id="1_1bnnc"]
 [ext_resource type="PackedScene" uid="uid://ejoh0v7oohwd" path="res://characters/king.tscn" id="2_5b5ha"]
+[ext_resource type="PackedScene" uid="uid://cbyehy4v4kbrv" path="res://UI/bg.tscn" id="2_hdn26"]
 [ext_resource type="PackedScene" uid="uid://b54vgidlm44hk" path="res://characters/jesture.tscn" id="3_do0po"]
 [ext_resource type="PackedScene" uid="uid://b54iumlq6ha5i" path="res://game_end.tscn" id="4_4yibn"]
 [ext_resource type="PackedScene" uid="uid://crocut2dqepf1" path="res://UI/points_list.tscn" id="4_7qtha"]
@@ -14,6 +15,8 @@ font_size = 27
 
 [node name="JokeGame" type="Node2D"]
 script = ExtResource("1_1bnnc")
+
+[node name="BG" parent="." instance=ExtResource("2_hdn26")]
 
 [node name="King2" parent="." instance=ExtResource("2_5b5ha")]
 position = Vector2(718, 217)
