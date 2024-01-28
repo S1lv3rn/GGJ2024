@@ -1,16 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://bgug8d7ruksj3"]
 
 [ext_resource type="Script" path="res://joke_mini_game.gd" id="1_1bnnc"]
-[ext_resource type="PackedScene" uid="uid://3l82fyqmxwci" path="res://characters/king.tscn" id="2_5b5ha"]
-[ext_resource type="PackedScene" uid="uid://dqouqss5p1y45" path="res://UI/bg.tscn" id="2_tlmxn"]
-[ext_resource type="PackedScene" uid="uid://bm8tlijkqh035" path="res://characters/jesture.tscn" id="3_do0po"]
+[ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="2_kp7e3"]
+[ext_resource type="PackedScene" uid="uid://bm8tlijkqh035" path="res://jesture.tscn" id="3_do0po"]
 [ext_resource type="PackedScene" uid="uid://b54iumlq6ha5i" path="res://game_end.tscn" id="4_4yibn"]
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://by84n35stcsf4" path="res://points_list.tscn" id="4_7qtha"]
 [ext_resource type="AudioStream" uid="uid://c546aydews2fg" path="res://vodevil-15550.mp3" id="6_e23fg"]
-=======
-[ext_resource type="PackedScene" uid="uid://by84n35stcsf4" path="res://UI/points_list.tscn" id="4_7qtha"]
->>>>>>> Stashed changes
 
 [sub_resource type="LabelSettings" id="LabelSettings_e5icx"]
 font_size = 27
@@ -18,116 +13,61 @@ font_size = 27
 [node name="JokeGame" type="Node2D"]
 script = ExtResource("1_1bnnc")
 
-[node name="BG" parent="." instance=ExtResource("2_tlmxn")]
-
-[node name="King2" parent="." instance=ExtResource("2_5b5ha")]
-position = Vector2(828, 209)
-scale = Vector2(0.8, 0.8)
+[node name="King" type="Sprite2D" parent="."]
+position = Vector2(792, 105)
+scale = Vector2(1.54688, 1)
+texture = ExtResource("2_kp7e3")
 
 [node name="Jesture" parent="." instance=ExtResource("3_do0po")]
-position = Vector2(263, 357)
+position = Vector2(250, 298)
 
-[node name="Buttons" type="CanvasLayer" parent="."]
-
-[node name="Control" type="Control" parent="Buttons"]
-layout_mode = 3
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -369.0
-offset_top = -226.0
-offset_right = 409.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="top" type="Control" parent="Buttons/Control"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 113.0
-grow_horizontal = 2
-
-[node name="Button1" type="Button" parent="Buttons/Control/top"]
+[node name="Button1" type="Button" parent="."]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -51.0
-offset_right = 368.0
-offset_bottom = 51.0
-grow_vertical = 2
+offset_left = 96.0
+offset_top = 410.0
+offset_right = 464.0
+offset_bottom = 512.0
 text = "B1"
 
-[node name="Button2" type="Button" parent="Buttons/Control/top"]
+[node name="Button2" type="Button" parent="."]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -368.0
-offset_top = -51.0
-offset_bottom = 51.0
-grow_horizontal = 0
-grow_vertical = 2
+offset_left = 544.0
+offset_top = 410.0
+offset_right = 912.0
+offset_bottom = 512.0
 text = "B2"
 
-[node name="bottom" type="Control" parent="Buttons/Control"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -108.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="Button3" type="Button" parent="Buttons/Control/bottom"]
+[node name="Button3" type="Button" parent="."]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -51.0
-offset_right = 368.0
-offset_bottom = 51.0
-grow_vertical = 2
+offset_left = 96.0
+offset_top = 544.0
+offset_right = 464.0
+offset_bottom = 646.0
 text = "B3"
 
-[node name="Button4" type="Button" parent="Buttons/Control/bottom"]
+[node name="Button4" type="Button" parent="."]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -368.0
-offset_top = -51.0
-offset_bottom = 51.0
-grow_horizontal = 0
-grow_vertical = 2
+offset_left = 544.0
+offset_top = 544.0
+offset_right = 912.0
+offset_bottom = 646.0
 text = "B4"
 
 [node name="KingsTalk" type="Label" parent="."]
 unique_name_in_owner = true
-offset_left = 291.0
-offset_top = 64.0
-offset_right = 568.0
-offset_bottom = 171.0
+offset_left = 208.0
+offset_top = 42.0
+offset_right = 485.0
+offset_bottom = 149.0
 text = "King Talk"
 label_settings = SubResource("LabelSettings_e5icx")
 
 [node name="NextButton" type="Button" parent="."]
 unique_name_in_owner = true
-offset_left = 841.0
-offset_top = 357.0
-offset_right = 1020.0
-offset_bottom = 401.0
+offset_left = 727.0
+offset_top = 332.0
+offset_right = 906.0
+offset_bottom = 376.0
 text = "Next Question"
 
 [node name="Timer" type="Timer" parent="."]
@@ -137,10 +77,10 @@ autostart = true
 
 [node name="TimeBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
-offset_left = 130.0
-offset_top = 19.0
-offset_right = 684.0
-offset_bottom = 46.0
+offset_left = 247.0
+offset_top = -3.0
+offset_right = 801.0
+offset_bottom = 24.0
 max_value = 12.0
 show_percentage = false
 
@@ -150,7 +90,6 @@ unique_name_in_owner = true
 [node name="PointsList" parent="." instance=ExtResource("4_7qtha")]
 unique_name_in_owner = true
 
-<<<<<<< Updated upstream
 [node name="clownmusic" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("6_e23fg")
@@ -159,11 +98,5 @@ stream = ExtResource("6_e23fg")
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
-=======
-[connection signal="pressed" from="Buttons/Control/top/Button1" to="." method="_on_button_1_pressed"]
-[connection signal="pressed" from="Buttons/Control/top/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Buttons/Control/bottom/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="Buttons/Control/bottom/Button4" to="." method="_on_button_4_pressed"]
->>>>>>> Stashed changes
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
