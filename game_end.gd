@@ -7,7 +7,7 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_pressed("enter") and visible == true:
-		if PlayerDetails.stage == 4:
+		if PlayerDetails.stage == 3:
 			get_tree().change_scene_to_file("res://main_menu.tscn")
 		else:
 			get_tree().change_scene_to_file("res://main_game.tscn")
