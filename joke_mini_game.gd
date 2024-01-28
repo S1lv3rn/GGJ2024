@@ -10,8 +10,14 @@ var kingQ
 var rightAns = 0
 var questionNo = 0
 var userAnswers = [0,0,0,0,0]
+var answers = ["A Brick", "A Yellow Brick", "A Blue Brick", "A Stick", "A Brick"]
+var questions = ["What’s red and bad for your teeth?","What's yellow and bad for your teeth?",
+				 "What's blue and bad for your teeth?","What's brown and sticky",
+				 "What's brown and bad for your teeth?"]
+var possibleAnswers
 
 func _ready():
+	setUpQuestions()
 	chooseQuestion()
 
 func _physics_process(delta):
@@ -20,33 +26,28 @@ func _physics_process(delta):
 func chooseQuestion():
 	%Timer.start()
 	%TimeBar.visible = true
-	var questionNum = randi_range(1,3)
+	var questionNum = randi_range(0,4)
 	
-	if questionNum == 1:
-		kingQ = "Rock"
-	elif questionNum == 2:
-		kingQ = "Paper"
-	else:
-		kingQ = "Scissors"
-		
+	kingQ = questions[questionNum]
+	
 	%KingsTalk.text = kingQ
 	%NextButton.visible = false
 	%Button2.visible = true
 	%Button3.visible = true
 	%Button4.visible = true
 	%Button1.visible = true
-	%Button2.text = "Scissors"
-	%Button3.text = "Rock"
-	%Button4.text = "Paper"
-	%Button1.text = "Paper"
+	
+	for a in possibleAnswers:
+		%Button1.text = a[0]
+		%Button2.text = a[1]
+		%Button3.text = a[2]
+		%Button4.text = a[3]
 
 # on button 
 func check_answer(answer):
 	%Timer.stop()
 	%TimeBar.visible = false
-	var isRight = (kingQ == "Paper" and answer == "Scissors"
-		or kingQ == "Scissors" and answer == "Rock"
-		or kingQ == "Rock" and answer == "Paper")
+	var isRight = answer in answers
 	var reply
 	
 	%Button2.visible = false
@@ -120,3 +121,10 @@ func setUpQuestions():
 							"What's brown and bad for your teeth?":"A Brick"
 							}
 	
+	var redAnswers = ["An Apple", "A Brick", "A Firetruck", "Candy"]
+	var yellowAnswers = ["A Yellow Brick", "A Banana", "A Lemon", "A Warning Sign"]
+	var blueAnswers = ["A Whale", "A Blue Brick", "Pepsi", "Ice"]
+	var stickAnswers = ["A Stick", "A Tree", "A Sticky Brick", "Toffee"]
+	var brownAnswers = ["A Stick", "A Brick", "Toffee", "Coffee"]
+	
+	possibleAnswers = [redAnswers, yellowAnswers, blueAnswers, stickAnswers, brownAnswers]
