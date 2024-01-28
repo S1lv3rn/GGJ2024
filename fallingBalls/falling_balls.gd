@@ -4,6 +4,7 @@ var isNotPaused = true
 var penaty = []
 
 func _ready():
+	%bgm.play()
 	$Jesture.isMoving = true
 	get_tree().paused = false
 
@@ -28,6 +29,7 @@ func _on_floor_area_entered(area):
 	if area.is_in_group("ball") and isNotPaused:
 		area.queue_free()
 		penaty.append(2)
+		%boo.play()
 		$PointsList.displayScore(penaty)
 		
 		if penaty.size() == 5:

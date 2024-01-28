@@ -26,7 +26,9 @@ func displayResult(result):
 func gameEnd(hasWon):
 	if hasWon:
 		%GameEndLabel.text = "You Made Him Laugh!"
+		%yay.play()
 		visible = true
 	else:
 		%GameEndLabel.text = "GAME OVER"
+		%oop.play()
 		visible = true

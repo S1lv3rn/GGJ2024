@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://batmetqfymkn4"]
+[gd_scene load_steps=11 format=3 uid="uid://batmetqfymkn4"]
 
 [ext_resource type="Script" path="res://fallingBalls/falling_balls.gd" id="1_af052"]
 [ext_resource type="PackedScene" uid="uid://crocut2dqepf1" path="res://UI/points_list.tscn" id="2_7qmv8"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://b54vgidlm44hk" path="res://characters/jesture.tscn" id="3_te5xc"]
 [ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="4_r0o8f"]
 [ext_resource type="PackedScene" uid="uid://b54iumlq6ha5i" path="res://game_end.tscn" id="5_u0mlo"]
+[ext_resource type="AudioStream" uid="uid://c546aydews2fg" path="res://Sounds/vodevil-15550.mp3" id="7_buow8"]
+[ext_resource type="AudioStream" uid="uid://bvqjxkoktu1ec" path="res://Sounds/boo.wav" id="8_m6xha"]
 
 [sub_resource type="Curve2D" id="Curve2D_2mgxq"]
 _data = {
@@ -64,6 +66,15 @@ position = Vector2(553, 507)
 scale = Vector2(0.7, 0.7)
 
 [node name="GameEnd" parent="." instance=ExtResource("5_u0mlo")]
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_buow8")
+volume_db = -10.0
+
+[node name="boo" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("8_m6xha")
 
 [connection signal="timeout" from="KingTimer" to="." method="_on_king_timer_timeout"]
 [connection signal="timeout" from="BallSpawnerPath/BallTimer" to="." method="_on_ball_timer_timeout"]
