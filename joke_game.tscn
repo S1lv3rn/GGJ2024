@@ -22,34 +22,34 @@ position = Vector2(250, 298)
 
 [node name="Button1" type="Button" parent="."]
 unique_name_in_owner = true
-offset_left = 92.0
-offset_top = 409.0
-offset_right = 467.0
-offset_bottom = 506.0
+offset_left = 96.0
+offset_top = 410.0
+offset_right = 464.0
+offset_bottom = 512.0
 text = "B1"
 
 [node name="Button2" type="Button" parent="."]
 unique_name_in_owner = true
-offset_left = 538.0
-offset_top = 414.0
-offset_right = 913.0
-offset_bottom = 511.0
+offset_left = 544.0
+offset_top = 410.0
+offset_right = 912.0
+offset_bottom = 512.0
 text = "B2"
 
 [node name="Button3" type="Button" parent="."]
 unique_name_in_owner = true
-offset_left = 95.0
-offset_top = 547.0
-offset_right = 470.0
-offset_bottom = 644.0
+offset_left = 96.0
+offset_top = 544.0
+offset_right = 464.0
+offset_bottom = 646.0
 text = "B3"
 
 [node name="Button4" type="Button" parent="."]
 unique_name_in_owner = true
-offset_left = 553.0
-offset_top = 552.0
-offset_right = 928.0
-offset_bottom = 649.0
+offset_left = 544.0
+offset_top = 544.0
+offset_right = 912.0
+offset_bottom = 646.0
 text = "B4"
 
 [node name="KingsTalk" type="Label" parent="."]
