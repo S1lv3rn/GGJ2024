@@ -27,7 +27,7 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Game Titile"
+text = "Game Title"
 label_settings = SubResource("LabelSettings_5jobj")
 
 [node name="Button" type="Button" parent="CanvasLayer"]

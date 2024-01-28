@@ -8,19 +8,19 @@ var stg1Txt = ["You got summoned to the COURT but the KING is in a BAD MOOD!",
 					"To save your head you gotta...",
 					"MAKE", "MAKE HIM", "MAKE HIM LAUGH!"]
 
-var stg2GoodTxt = ["His Magesty seems amused!", 
+var stg2GoodTxt = ["His Majesty seems amused!", 
 						"He's chuckling slightly!", 
 						"You have keep it up! Let's...",
 						"MAKE", "MAKE HIM", "MAKE HIM LAUGH!"]
-var stg2BadTxt = ["His Magesty doesn't seem impressed", "Better step it up next time...", 
+var stg2BadTxt = ["His Majesty doesn't seem impressed", "Better step it up next time...", 
 						"You really need to...",
 						"MAKE", "MAKE HIM", "MAKE HIM LAUGH!"]
 
 
 
-var stg3GoodTxt = ["The King is roaring with laughter!", "Looks like you'll keep you head another day!"]
-var stg3MidTxt = ["Another mixed perfomace...", "You barely managed to amunse the King", "The afternoon session may not be so lucky..."]
-var stg3BadTxt = ["The king is still angry and doen't like that you made light of the situation", "You may not be going to court tomorrow", "You may be going anywhere at all..."]
+var stg3GoodTxt = ["The King is roaring with laughter!", "Looks like you'll keep your head another day!"]
+var stg3MidTxt = ["Another mixed perfomace...", "You barely managed to amuse the King", "The afternoon session may not be so lucky..."]
+var stg3BadTxt = ["The king is still angry and doesn't like that you made light of the situation", "You may not be going to court tomorrow", "You may be going anywhere at all..."]
 
 var test = [{"txtArr": stg1Txt, "nxtScene": "res://joke_game.tscn"},
 			{"txtArr": stg2GoodTxt, "nxtScene": "res://fallingBalls/falling_balls.tscn"},
