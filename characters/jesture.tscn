@@ -11,6 +11,7 @@ size = Vector2(234, 376)
 script = ExtResource("1_8ov1q")
 
 [node name="Jesture" type="Sprite2D" parent="."]
+modulate = Color(0.341176, 0.658824, 0.345098, 1)
 position = Vector2(10, 0)
 
 [node name="Jester-fill-draft" type="Sprite2D" parent="Jesture"]
@@ -18,6 +19,7 @@ position = Vector2(22, 10)
 texture = ExtResource("2_pd0sa")
 
 [node name="Jester-line-draft" type="Sprite2D" parent="Jesture"]
+modulate = Color(0.341176, 0.658824, 0.345098, 1)
 position = Vector2(22, 10)
 texture = ExtResource("3_ri6dn")
 
