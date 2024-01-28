@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://bgug8d7ruksj3"]
 
 [ext_resource type="Script" path="res://joke_mini_game.gd" id="1_1bnnc"]
-[ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="2_kp7e3"]
-[ext_resource type="PackedScene" uid="uid://bm8tlijkqh035" path="res://jesture.tscn" id="3_do0po"]
+[ext_resource type="PackedScene" uid="uid://ejoh0v7oohwd" path="res://characters/king.tscn" id="2_5b5ha"]
+[ext_resource type="PackedScene" uid="uid://b54vgidlm44hk" path="res://characters/jesture.tscn" id="3_do0po"]
 [ext_resource type="PackedScene" uid="uid://b54iumlq6ha5i" path="res://game_end.tscn" id="4_4yibn"]
-[ext_resource type="PackedScene" uid="uid://by84n35stcsf4" path="res://points_list.tscn" id="4_7qtha"]
+[ext_resource type="PackedScene" uid="uid://crocut2dqepf1" path="res://UI/points_list.tscn" id="4_7qtha"]
 [ext_resource type="AudioStream" uid="uid://c546aydews2fg" path="res://vodevil-15550.mp3" id="6_e23fg"]
 [ext_resource type="AudioStream" uid="uid://cflwq4083s7td" path="res://funny.wav" id="7_auhs0"]
 
@@ -14,13 +14,12 @@ font_size = 27
 [node name="JokeGame" type="Node2D"]
 script = ExtResource("1_1bnnc")
 
-[node name="King" type="Sprite2D" parent="."]
-position = Vector2(792, 105)
-scale = Vector2(1.54688, 1)
-texture = ExtResource("2_kp7e3")
+[node name="King2" parent="." instance=ExtResource("2_5b5ha")]
+position = Vector2(718, 217)
+scale = Vector2(0.8, 0.8)
 
 [node name="Jesture" parent="." instance=ExtResource("3_do0po")]
-position = Vector2(250, 298)
+position = Vector2(355, 397)
 
 [node name="Button1" type="Button" parent="."]
 unique_name_in_owner = true
