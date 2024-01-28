@@ -44,7 +44,7 @@ rotation = 0.00282485
 autostart = true
 
 [node name="PointsList" parent="." instance=ExtResource("2_7qmv8")]
-position = Vector2(102, 126)
+position = Vector2(80, 150)
 
 [node name="Floor" type="Area2D" parent="."]
 position = Vector2(73, 669)
