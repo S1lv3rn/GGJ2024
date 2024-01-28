@@ -121,7 +121,7 @@ func setUpQuestions():
 	questionToAnswer = {"What’s red and bad for your teeth?": "A Brick",
 							"What's yellow and bad for your teeth?":"A Yellow Brick",
 							"What's blue and bad for your teeth?":"A Blue Brick",
-							"What's brown and sticky": "A stick",
+							"What's brown and sticky": "A Stick",
 							"What's brown and bad for your teeth?":"A Brick"
 							}
 	#
