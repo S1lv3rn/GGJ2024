@@ -30,6 +30,7 @@ var test = [{"txtArr": stg1Txt, "nxtScene": "res://joke_game.tscn"},
 			{"txtArr": stg3BadTxt, "nxtScene": ""}]
 
 func _ready():
+	%bgm.play()
 	$ProgressBar.value = PlayerDetails.kings_mood
 	$Jesture.isMoving = false
 	txtInx = 0

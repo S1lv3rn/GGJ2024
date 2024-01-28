@@ -17,6 +17,7 @@ var questions = ["What’s red and bad for your teeth?","What's yellow and bad f
 var possibleAnswers = []
 
 func _ready():
+	%clownmusic.play()
 	setUpQuestions()
 	chooseQuestion()
 
