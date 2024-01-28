@@ -1,19 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://bm8tlijkqh035"]
 
-[ext_resource type="Script" path="res://jesture.gd" id="1_8ov1q"]
-[ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="1_lmjwy"]
+[ext_resource type="Script" path="res://jesture.gd" id="1_g56ar"]
+[ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="2_twhql"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xd4si"]
 size = Vector2(128, 128)
 
 [node name="Jesture" type="Area2D"]
-script = ExtResource("1_8ov1q")
+script = ExtResource("1_g56ar")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_xd4si")
 
 [node name="Jesture" type="Sprite2D" parent="."]
-texture = ExtResource("1_lmjwy")
+texture = ExtResource("2_twhql")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

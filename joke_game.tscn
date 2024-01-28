@@ -17,10 +17,11 @@ script = ExtResource("1_1bnnc")
 
 [node name="King2" parent="." instance=ExtResource("2_5b5ha")]
 position = Vector2(718, 217)
-scale = Vector2(0.8, 0.8)
+scale = Vector2(0.7, 0.7)
 
 [node name="Jesture" parent="." instance=ExtResource("3_do0po")]
 position = Vector2(355, 397)
+scale = Vector2(0.8, 0.8)
 
 [node name="Button1" type="Button" parent="."]
 unique_name_in_owner = true
@@ -56,10 +57,10 @@ text = "B4"
 
 [node name="KingsTalk" type="Label" parent="."]
 unique_name_in_owner = true
-offset_left = 208.0
-offset_top = 42.0
-offset_right = 485.0
-offset_bottom = 149.0
+offset_left = 105.0
+offset_top = 37.0
+offset_right = 382.0
+offset_bottom = 144.0
 text = "King Talk"
 label_settings = SubResource("LabelSettings_e5icx")
 
@@ -90,6 +91,7 @@ unique_name_in_owner = true
 
 [node name="PointsList" parent="." instance=ExtResource("4_7qtha")]
 unique_name_in_owner = true
+position = Vector2(97, 103)
 
 [node name="clownmusic" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true

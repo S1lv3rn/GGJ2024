@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ceuwnvxcecpwc"]
+[gd_scene load_steps=2 format=3 uid="uid://ceuwnvxcecpwc"]
 
-[ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="1_73mtt"]
+[ext_resource type="Texture2D" uid="uid://1mti63gye1u6" path="res://Art/ball.png" id="1_a6nhj"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_niu7m"]
+[node name="scorebtn" type="Node2D"]
+scale = Vector2(0.5, 0.5)
 
-[node name="scorebtn" type="Sprite2D"]
-material = SubResource("CanvasItemMaterial_niu7m")
-scale = Vector2(0.257813, 0.25)
-texture = ExtResource("1_73mtt")
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(193, 201)
+texture = ExtResource("1_a6nhj")
