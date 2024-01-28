@@ -21,7 +21,6 @@ color = Color(0, 0, 0, 0.529412)
 
 [node name="King" parent="ColorRect" instance=ExtResource("2_xjohf")]
 unique_name_in_owner = true
-modulate = Color(1, 0.447059, 0.231373, 1)
 position = Vector2(584, 638)
 
 [node name="GameEndLabel" type="Label" parent="."]
