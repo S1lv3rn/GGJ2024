@@ -28,34 +28,34 @@ scale = Vector2(0.8, 0.8)
 
 [node name="Button1" type="Button" parent="."]
 unique_name_in_owner = true
-offset_left = 96.0
-offset_top = 410.0
-offset_right = 464.0
-offset_bottom = 512.0
+offset_left = 152.0
+offset_top = 396.0
+offset_right = 520.0
+offset_bottom = 498.0
 text = "B1"
 
 [node name="Button2" type="Button" parent="."]
 unique_name_in_owner = true
-offset_left = 544.0
-offset_top = 410.0
-offset_right = 912.0
-offset_bottom = 512.0
+offset_left = 600.0
+offset_top = 396.0
+offset_right = 968.0
+offset_bottom = 498.0
 text = "B2"
 
 [node name="Button3" type="Button" parent="."]
 unique_name_in_owner = true
-offset_left = 96.0
-offset_top = 544.0
-offset_right = 464.0
-offset_bottom = 646.0
+offset_left = 152.0
+offset_top = 530.0
+offset_right = 520.0
+offset_bottom = 632.0
 text = "B3"
 
 [node name="Button4" type="Button" parent="."]
 unique_name_in_owner = true
-offset_left = 544.0
-offset_top = 544.0
-offset_right = 912.0
-offset_bottom = 646.0
+offset_left = 600.0
+offset_top = 530.0
+offset_right = 968.0
+offset_bottom = 632.0
 text = "B4"
 
 [node name="KingsTalk" type="Label" parent="."]

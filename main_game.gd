@@ -58,6 +58,7 @@ func nextText():
 	else:
 		PlayerDetails.stage +=1
 		if (test[i].get("nxtScene") == ""):
+			%bgm.stop()
 			$GameEnd.gameEnd(PlayerDetails.kings_mood == 3)
 		else:
 			get_tree().change_scene_to_file(test[i].get("nxtScene"))
