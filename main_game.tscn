@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdwm2em4iu751"]
+[gd_scene load_steps=5 format=3 uid="uid://ftspsyvrt547"]
 
 [ext_resource type="Script" path="res://main_game.gd" id="1_3yn3c"]
 [ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="1_kns40"]
 [ext_resource type="PackedScene" uid="uid://bm8tlijkqh035" path="res://jesture.tscn" id="3_pn5ns"]
+[ext_resource type="PackedScene" uid="uid://c6ufhp35h6pln" path="res://game_end.tscn" id="4_fqw0g"]
 
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_3yn3c")
@@ -29,5 +30,7 @@ offset_top = 422.0
 offset_right = 1055.0
 offset_bottom = 600.0
 text = "(click to advance)"
+
+[node name="GameEnd" parent="." instance=ExtResource("4_fqw0g")]
 
 [connection signal="pressed" from="TextBox" to="." method="_on_button_pressed"]
