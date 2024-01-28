@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bgug8d7ruksj3"]
+[gd_scene load_steps=10 format=3 uid="uid://bgug8d7ruksj3"]
 
 [ext_resource type="Script" path="res://joke_mini_game.gd" id="1_1bnnc"]
 [ext_resource type="PackedScene" uid="uid://ejoh0v7oohwd" path="res://characters/king.tscn" id="2_5b5ha"]
 [ext_resource type="PackedScene" uid="uid://b54vgidlm44hk" path="res://characters/jesture.tscn" id="3_do0po"]
 [ext_resource type="PackedScene" uid="uid://b54iumlq6ha5i" path="res://game_end.tscn" id="4_4yibn"]
 [ext_resource type="PackedScene" uid="uid://crocut2dqepf1" path="res://UI/points_list.tscn" id="4_7qtha"]
-[ext_resource type="AudioStream" uid="uid://c546aydews2fg" path="res://vodevil-15550.mp3" id="6_e23fg"]
-[ext_resource type="AudioStream" uid="uid://cflwq4083s7td" path="res://funny.wav" id="7_auhs0"]
+[ext_resource type="AudioStream" uid="uid://c546aydews2fg" path="res://Sounds/vodevil-15550.mp3" id="6_e23fg"]
+[ext_resource type="AudioStream" uid="uid://cflwq4083s7td" path="res://Sounds/funny.wav" id="7_auhs0"]
+[ext_resource type="AudioStream" uid="uid://cp2r0w2e1cq8p" path="res://Sounds/boo-6377.mp3" id="8_wuw6i"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_e5icx"]
 font_size = 27
@@ -98,6 +99,10 @@ volume_db = -10.0
 [node name="funny" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("7_auhs0")
+
+[node name="booing" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("8_wuw6i")
 
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -63,6 +63,8 @@ func check_answer(answer):
 	else:
 		reply = "Wrong!"
 		userAnswers[questionNo] = 2
+		%booing.play()
+		
 		
 	%PointsList.displayScore(userAnswers)
 	%KingsTalk.text = reply
