@@ -13,6 +13,7 @@ func _process(delta):
 			get_tree().change_scene_to_file("res://main_game.tscn")
 
 func displayResult(result):
+	%ColorRect/King.visible = true
 	if !result:
 		%GameEndLabel.text = "You suck >:("
 		visible = true
@@ -24,6 +25,7 @@ func displayResult(result):
 		
 		
 func gameEnd(hasWon):
+	%ColorRect/King.visible = false
 	if hasWon:
 		%GameEndLabel.text = "You Made Him Laugh!"
 		%yay.play()

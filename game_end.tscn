@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b54iumlq6ha5i"]
+[gd_scene load_steps=6 format=3 uid="uid://b54iumlq6ha5i"]
 
 [ext_resource type="Script" path="res://game_end.gd" id="1_vmnos"]
 [ext_resource type="AudioStream" uid="uid://bosgl3ojssnj0" path="res://Sounds/cheer.wav" id="2_lo5ot"]
+[ext_resource type="PackedScene" uid="uid://ejoh0v7oohwd" path="res://characters/king.tscn" id="2_xjohf"]
 [ext_resource type="AudioStream" uid="uid://kkagn4s46m1f" path="res://Sounds/dun-dun-duuun-v01-105105.mp3" id="3_i5idw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gx6q1"]
 font_size = 76
 
 [node name="GameEnd" type="CanvasLayer"]
-visible = false
 script = ExtResource("1_vmnos")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -18,6 +18,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.529412)
+
+[node name="King" parent="ColorRect" instance=ExtResource("2_xjohf")]
+unique_name_in_owner = true
+modulate = Color(1, 0.447059, 0.231373, 1)
+position = Vector2(584, 638)
 
 [node name="GameEndLabel" type="Label" parent="."]
 unique_name_in_owner = true
