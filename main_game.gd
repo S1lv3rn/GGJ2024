@@ -19,7 +19,7 @@ var stg2BadTxt = ["His Majesty doesn't seem impressed", "Better step it up next 
 
 
 var stg3GoodTxt = ["The King is roaring with laughter!", "Looks like you'll keep your head another day!"]
-var stg3MidTxt = ["Another mixed perfomace...", "You barely managed to amuse the King", "The afternoon session may not be so lucky..."]
+var stg3MidTxt = ["Another mixed performance...", "You barely managed to amuse the King", "The afternoon session may not be so lucky..."]
 var stg3BadTxt = ["The king is still angry and doesn't like that you made light of the situation", "You may not be going to court tomorrow", "You may be going anywhere at all..."]
 
 var test = [{"txtArr": stg1Txt, "nxtScene": "res://joke_game.tscn"},
