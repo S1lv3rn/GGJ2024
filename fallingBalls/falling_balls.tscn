@@ -52,6 +52,7 @@ position = Vector2(80, 150)
 position = Vector2(73, 669)
 
 [node name="Icon" type="Sprite2D" parent="Floor"]
+modulate = Color(0.588235, 0.360784, 0.0666667, 0.894118)
 position = Vector2(525, -10)
 scale = Vector2(9.75, 0.34375)
 texture = ExtResource("4_r0o8f")

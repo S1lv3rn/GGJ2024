@@ -1,7 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://by84n35stcsf4"]
+[gd_scene load_steps=2 format=3 uid="uid://dhcxugwvrov0e"]
 
 [ext_resource type="Script" path="res://Container.gd" id="1_ymv3h"]
 
 [node name="PointsList" type="Marker2D"]
-position = Vector2(207, 114)
 script = ExtResource("1_ymv3h")
