@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbyehy4v4kbrv"]
+
+[sub_resource type="Gradient" id="Gradient_34ply"]
+colors = PackedColorArray(1, 0.748667, 0.42, 1, 0.43, 0.29025, 0.1075, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0031r"]
+gradient = SubResource("Gradient_34ply")
+fill = 1
+fill_from = Vector2(0.520179, 0.90583)
+fill_to = Vector2(0.457399, 0)
+
+[node name="BG" type="CanvasLayer"]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.701961, 0.431373, 0.223529, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 321.5)
+scale = Vector2(18.0313, 10.2344)
+texture = SubResource("GradientTexture2D_0031r")

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ejoh0v7oohwd"]
+
+[ext_resource type="Texture2D" uid="uid://cgglqiutsuxef" path="res://Art/king-fill-draft.png" id="1_de423"]
+[ext_resource type="Texture2D" uid="uid://cc0gutucepem8" path="res://Art/king-line-draft.png" id="2_bscmy"]
+
+[node name="King" type="Sprite2D"]
+
+[node name="King-fill-draft" type="Sprite2D" parent="."]
+texture = ExtResource("1_de423")
+
+[node name="King-line-draft" type="Sprite2D" parent="."]
+texture = ExtResource("2_bscmy")
