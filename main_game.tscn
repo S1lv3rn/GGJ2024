@@ -1,18 +1,17 @@
 [gd_scene load_steps=6 format=3 uid="uid://cdwm2em4iu751"]
 
 [ext_resource type="Script" path="res://main_game.gd" id="1_3yn3c"]
-[ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="1_kns40"]
-[ext_resource type="PackedScene" uid="uid://bm8tlijkqh035" path="res://jesture.tscn" id="3_pn5ns"]
+[ext_resource type="PackedScene" uid="uid://3l82fyqmxwci" path="res://characters/king.tscn" id="2_ytlr5"]
+[ext_resource type="PackedScene" uid="uid://bm8tlijkqh035" path="res://characters/jesture.tscn" id="3_pn5ns"]
 [ext_resource type="PackedScene" uid="uid://b54iumlq6ha5i" path="res://game_end.tscn" id="4_fqw0g"]
 [ext_resource type="AudioStream" uid="uid://b7r0klkp8hspa" path="res://little-adventure-95822.mp3" id="5_wbfqd"]
 
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_3yn3c")
 
-[node name="King" type="Sprite2D" parent="."]
-position = Vector2(587, 148)
-scale = Vector2(1.50781, 1.01563)
-texture = ExtResource("1_kns40")
+[node name="King" parent="." instance=ExtResource("2_ytlr5")]
+position = Vector2(562, 217)
+scale = Vector2(0.5, 0.5)
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 offset_left = 253.0
@@ -23,13 +22,14 @@ max_value = 3.0
 value = 1.0
 
 [node name="Jesture" parent="." instance=ExtResource("3_pn5ns")]
-position = Vector2(590, 398)
+position = Vector2(555, 424)
+scale = Vector2(0.8, 0.8)
 
 [node name="TextBox" type="Button" parent="."]
-offset_left = 114.0
-offset_top = 422.0
-offset_right = 1055.0
-offset_bottom = 600.0
+offset_left = 107.0
+offset_top = 461.0
+offset_right = 1048.0
+offset_bottom = 639.0
 text = "(click to advance)"
 
 [node name="GameEnd" parent="." instance=ExtResource("4_fqw0g")]

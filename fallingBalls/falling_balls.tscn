@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://batmetqfymkn4"]
+[gd_scene load_steps=9 format=3 uid="uid://batmetqfymkn4"]
 
 [ext_resource type="Script" path="res://fallingBalls/falling_balls.gd" id="1_af052"]
-[ext_resource type="PackedScene" uid="uid://by84n35stcsf4" path="res://points_list.tscn" id="2_7qmv8"]
-[ext_resource type="PackedScene" uid="uid://bm8tlijkqh035" path="res://jesture.tscn" id="3_te5xc"]
+[ext_resource type="PackedScene" uid="uid://by84n35stcsf4" path="res://UI/points_list.tscn" id="2_7qmv8"]
+[ext_resource type="PackedScene" uid="uid://dqouqss5p1y45" path="res://UI/bg.tscn" id="2_iykss"]
+[ext_resource type="PackedScene" uid="uid://bm8tlijkqh035" path="res://characters/jesture.tscn" id="3_te5xc"]
 [ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="4_r0o8f"]
-[ext_resource type="PackedScene" uid="uid://c6ufhp35h6pln" path="res://game_end.tscn" id="5_u0mlo"]
+[ext_resource type="PackedScene" uid="uid://b54iumlq6ha5i" path="res://game_end.tscn" id="5_u0mlo"]
 
 [sub_resource type="Curve2D" id="Curve2D_2mgxq"]
 _data = {
@@ -17,6 +18,8 @@ size = Vector2(1246, 41.5)
 
 [node name="FallingBalls" type="Node2D"]
 script = ExtResource("1_af052")
+
+[node name="BG" parent="." instance=ExtResource("2_iykss")]
 
 [node name="KingTimer" type="Timer" parent="."]
 wait_time = 30.0
@@ -43,9 +46,6 @@ autostart = true
 [node name="PointsList" parent="." instance=ExtResource("2_7qmv8")]
 position = Vector2(80, 150)
 
-[node name="Jesture" parent="." instance=ExtResource("3_te5xc")]
-position = Vector2(559, 568)
-
 [node name="Floor" type="Area2D" parent="."]
 position = Vector2(73, 669)
 
@@ -58,6 +58,10 @@ texture = ExtResource("4_r0o8f")
 position = Vector2(523, -8.75)
 shape = SubResource("RectangleShape2D_qlmit")
 debug_color = Color(0.368627, 0.490196, 0.964706, 0.419608)
+
+[node name="Jesture" parent="." instance=ExtResource("3_te5xc")]
+position = Vector2(554, 507)
+scale = Vector2(0.7, 0.7)
 
 [node name="GameEnd" parent="." instance=ExtResource("5_u0mlo")]
 
