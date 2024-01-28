@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cflwq4083s7td"
-path="res://.godot/imported/funny.wav-31be393a57a8e750f5579133deb2ef6c.sample"
+path="res://.godot/imported/funny.wav-6e1f0673cc70a790965aadc735492f41.sample"
 
 [deps]
 
-source_file="res://funny.wav"
-dest_files=["res://.godot/imported/funny.wav-31be393a57a8e750f5579133deb2ef6c.sample"]
+source_file="res://Sounds/funny.wav"
+dest_files=["res://.godot/imported/funny.wav-6e1f0673cc70a790965aadc735492f41.sample"]
 
 [params]
 

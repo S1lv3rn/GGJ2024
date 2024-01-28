@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ejoh0v7oohwd" path="res://characters/king.tscn" id="2_ytlr5"]
 [ext_resource type="PackedScene" uid="uid://b54vgidlm44hk" path="res://characters/jesture.tscn" id="3_pn5ns"]
 [ext_resource type="PackedScene" uid="uid://b54iumlq6ha5i" path="res://game_end.tscn" id="4_fqw0g"]
-[ext_resource type="AudioStream" uid="uid://b7r0klkp8hspa" path="res://little-adventure-95822.mp3" id="5_wbfqd"]
+[ext_resource type="AudioStream" uid="uid://b7r0klkp8hspa" path="res://Sounds/little-adventure-95822.mp3" id="5_wbfqd"]
 
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_3yn3c")
