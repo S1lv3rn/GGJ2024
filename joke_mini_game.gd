@@ -15,6 +15,7 @@ var questions = ["What’s red and bad for your teeth?","What's yellow and bad f
 				 "What's blue and bad for your teeth?","What's brown and sticky",
 				 "What's brown and bad for your teeth?"]
 var possibleAnswers = []
+var questionToAnswer
 
 func _ready():
 	%clownmusic.play()
@@ -47,7 +48,7 @@ func chooseQuestion():
 func check_answer(answer):
 	%Timer.stop()
 	%TimeBar.visible = false
-	var isRight = answer in answers
+	var isRight = answer == questionToAnswer[kingQ]
 	var reply
 	
 	%Button2.visible = false
@@ -117,12 +118,12 @@ func _on_timer_timeout():
 	%NextButton.visible = true
 
 func setUpQuestions():
-	#var questionToAnswer = {"What’s red and bad for your teeth?": "A Brick",
-							#"What's yellow and bad for your teeth?":"A Yellow Brick",
-							#"What's blue and bad for your teeth?":"A Blue Brick",
-							#"What's brown and sticky": "A stick",
-							#"What's brown and bad for your teeth?":"A Brick"
-							#}
+	questionToAnswer = {"What’s red and bad for your teeth?": "A Brick",
+							"What's yellow and bad for your teeth?":"A Yellow Brick",
+							"What's blue and bad for your teeth?":"A Blue Brick",
+							"What's brown and sticky": "A stick",
+							"What's brown and bad for your teeth?":"A Brick"
+							}
 	#
 	var redAnswers = ["An Apple", "A Brick", "A Firetruck", "Candy"]
 	var yellowAnswers = ["A Yellow Brick", "A Banana", "A Lemon", "A Warning Sign"]
@@ -130,4 +131,9 @@ func setUpQuestions():
 	var stickAnswers = ["A Stick", "A Tree", "A Sticky Brick", "Toffee"]
 	var brownAnswers = ["A Stick", "A Brick", "Toffee", "Coffee"]
 	
+	redAnswers.shuffle()
+	yellowAnswers.shuffle()
+	blueAnswers.shuffle()
+	stickAnswers.shuffle()
+	brownAnswers.shuffle()
 	possibleAnswers = [redAnswers, yellowAnswers, blueAnswers, stickAnswers, brownAnswers]
