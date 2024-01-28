@@ -14,7 +14,7 @@ func _process(delta):
 
 func displayResult(result):
 	if !result:
-		%GameEndLabel.text = "Your perfomance sucks"
+		%GameEndLabel.text = "You suck >:("
 		visible = true
 	
 	if result:

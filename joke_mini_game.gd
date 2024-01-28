@@ -10,11 +10,11 @@ var kingQ
 var rightAns = 0
 var questionNo = 0
 var userAnswers = [0,0,0,0,0]
-var answers = ["A Brick", "A Yellow Brick", "A Blue Brick", "A Stick", "A Brick"]
+var answers = ["A Brick", "A Yellow Brick", "A Blue Brick", "A Stick"]
 var questions = ["What’s red and bad for your teeth?","What's yellow and bad for your teeth?",
 				 "What's blue and bad for your teeth?","What's brown and sticky",
 				 "What's brown and bad for your teeth?"]
-var possibleAnswers
+var possibleAnswers = []
 
 func _ready():
 	setUpQuestions()
@@ -37,11 +37,10 @@ func chooseQuestion():
 	%Button4.visible = true
 	%Button1.visible = true
 	
-	for a in possibleAnswers:
-		%Button1.text = a[0]
-		%Button2.text = a[1]
-		%Button3.text = a[2]
-		%Button4.text = a[3]
+	%Button1.text = possibleAnswers[questionNum][0]
+	%Button2.text = possibleAnswers[questionNum][1]
+	%Button3.text = possibleAnswers[questionNum][2]
+	%Button4.text = possibleAnswers[questionNum][3]
 
 # on button 
 func check_answer(answer):
@@ -114,13 +113,13 @@ func _on_timer_timeout():
 	%NextButton.visible = true
 
 func setUpQuestions():
-	var questionToAnswer = {"What’s red and bad for your teeth?": "A Brick",
-							"What's yellow and bad for your teeth?":"A Yellow Brick",
-							"What's blue and bad for your teeth?":"A Blue Brick",
-							"What's brown and sticky": "A stick",
-							"What's brown and bad for your teeth?":"A Brick"
-							}
-	
+	#var questionToAnswer = {"What’s red and bad for your teeth?": "A Brick",
+							#"What's yellow and bad for your teeth?":"A Yellow Brick",
+							#"What's blue and bad for your teeth?":"A Blue Brick",
+							#"What's brown and sticky": "A stick",
+							#"What's brown and bad for your teeth?":"A Brick"
+							#}
+	#
 	var redAnswers = ["An Apple", "A Brick", "A Firetruck", "Candy"]
 	var yellowAnswers = ["A Yellow Brick", "A Banana", "A Lemon", "A Warning Sign"]
 	var blueAnswers = ["A Whale", "A Blue Brick", "Pepsi", "Ice"]

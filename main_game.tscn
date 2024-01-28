@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ftspsyvrt547"]
+[gd_scene load_steps=5 format=3 uid="uid://cdwm2em4iu751"]
 
 [ext_resource type="Script" path="res://main_game.gd" id="1_3yn3c"]
 [ext_resource type="Texture2D" uid="uid://bnmy8k31d3ehd" path="res://icon.svg" id="1_kns40"]
 [ext_resource type="PackedScene" uid="uid://bm8tlijkqh035" path="res://jesture.tscn" id="3_pn5ns"]
-[ext_resource type="PackedScene" uid="uid://c6ufhp35h6pln" path="res://game_end.tscn" id="4_fqw0g"]
+[ext_resource type="PackedScene" uid="uid://b54iumlq6ha5i" path="res://game_end.tscn" id="4_fqw0g"]
 
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_3yn3c")
